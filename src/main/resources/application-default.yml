@@ -1,4 +1,4 @@
 spring.datasource:
-  url: jdbc:mysql://120.78.155.143:3306/sale
-  username: root
-  password: Syw543328@!
+  url: jdbc:mysql://xx:3306/sale
+  username:
+  password:
