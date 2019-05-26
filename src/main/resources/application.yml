@@ -11,8 +11,6 @@ spring.jpa:
       temp.use_jdbc_metadata_defaults=false: false
       show_sql: true
       format_sql: true
-  hibernate:
-    ddl-auto: validate
 
 spring.datasource:
   url:
