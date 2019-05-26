@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class StateDTO {
+public class RegionDTO {
 
   private Long id;
 
@@ -19,7 +19,7 @@ public class StateDTO {
 
   private String shortName;
 
-  private RegionDTO region;
+  private String regionCode;
 
   private String createdBy;
 

@@ -6,17 +6,19 @@ import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class BaseEntity {
+@MappedSuperclass
+public abstract class BaseEntity {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(columnDefinition = "String", updatable = false, nullable = false)
-  private String id;
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(columnDefinition = "Long", updatable = false, nullable = false)
+  private Long id;
 
   protected Date createdDate;
 

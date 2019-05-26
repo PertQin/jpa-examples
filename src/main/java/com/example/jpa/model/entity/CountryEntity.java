@@ -1,5 +1,6 @@
 package com.example.jpa.model.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -32,5 +33,5 @@ public class CountryEntity extends BaseEntity {
       fetch = FetchType.EAGER,
       cascade = CascadeType.ALL,
       orphanRemoval = true)
-  private List<StateEntity> states;
+  private List<StateEntity> states = new ArrayList<>();
 }

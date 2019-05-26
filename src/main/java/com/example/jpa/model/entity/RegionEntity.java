@@ -1,6 +1,11 @@
 package com.example.jpa.model.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,4 +26,11 @@ public class RegionEntity extends BaseEntity {
   private String shortName;
 
   private String regionCode;
+
+  @OneToMany(
+      mappedBy = "region",
+      fetch = FetchType.EAGER,
+      cascade = CascadeType.ALL,
+      orphanRemoval = true)
+  private List<StateEntity> states = new ArrayList<>();
 }
